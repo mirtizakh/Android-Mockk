@@ -45,5 +45,5 @@ class RelaxedMocksExample {
     you can use relaxUnitFun = true as an argument to the mockk function,
      @MockKannotation or MockKAnnotations.init function.
      */
-    
+
 }
