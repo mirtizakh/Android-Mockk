@@ -11,15 +11,29 @@ class Dependency1(val value1: Int) {
 
 }
 
-class Dependency2(val value2: String) {
-    fun call(value: Int): Int {
-        result(value)
-        return value
+class Dependency3 {
+    fun call(doc2: Dependency2): Int {
+        result(5)
+        doc2.result(5)
+        return doc2.call(5)!!
     }
 
     fun result(value: Int) {
         // doing some work here
     }
+
+}
+
+class Dependency2(val value2: String) {
+    fun call(value: Int): Int {
+
+        return  value
+    }
+
+    fun result(value: Int) {
+        // doing some work here
+    }
+
 }
 
 class SystemUnderTest(

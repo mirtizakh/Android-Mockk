@@ -80,7 +80,7 @@ class ReturnsExample {
     // Check the MVP project in the repository to get better understanding of answer
     @Test
     fun answerReturns() {
-        val doc1 = mockk<Dependency1>(relaxUnitFun = true)
+        val doc1 = mockk<Dependency1>()
         every { doc1.call(5) } answers { arg<Int>(0) + 5 }
 
         /*

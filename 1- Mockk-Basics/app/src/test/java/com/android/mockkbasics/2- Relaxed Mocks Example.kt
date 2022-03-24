@@ -1,7 +1,7 @@
 package com.android.mockkbasics
 
-import io.mockk.mockk
-import io.mockk.verify
+import io.mockk.*
+import junit.framework.TestCase
 import org.junit.Test
 
 class RelaxedMocksExample {
@@ -37,4 +37,13 @@ class RelaxedMocksExample {
 
         verify { mock.call1(1, 2).call2(4, 5) }
     }
+
+    // Mock relaxed for functions returning Unit
+
+    /*
+    n case you would like Unit returning functions to be relaxed,
+    you can use relaxUnitFun = true as an argument to the mockk function,
+     @MockKannotation or MockKAnnotations.init function.
+     */
+    
 }
