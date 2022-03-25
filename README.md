@@ -44,9 +44,9 @@ Example : <br>
    fun validateString() {<br>
    every { TextUtils.isEmpty(param } returns true<br>
    }<br> <br>
-   This is how you can mock static method isEmpty(param) of TextUtils class easily.
    
-   
+   ### Examples 
+  
    Simplest example. By default mocks are strict, so you need to provide some behaviour.
 
 ```kotlin
