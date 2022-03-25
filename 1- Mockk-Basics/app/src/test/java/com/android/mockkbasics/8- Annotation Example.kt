@@ -1,7 +1,6 @@
 package com.android.mockkbasics
 
 import io.mockk.*
-import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.impl.annotations.SpyK
