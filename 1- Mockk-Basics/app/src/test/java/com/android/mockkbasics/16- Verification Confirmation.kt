@@ -7,7 +7,7 @@ class CalculationVerificationConfirmation {
     fun add(num1: Int) = num1 + 10
 }
 
-class VerificationConfirmation{
+class VerificationConfirmation {
 
     // To double check that all calls were verified by verify... constructs, you can use confirmVerified:
     // confirmVerified(mock1, mock2)
@@ -21,7 +21,7 @@ class VerificationConfirmation{
     Some calls may be skipped from such confirmation, check the next section for more details.
      */
     @Test
-    fun verificationConfirmation(){
+    fun verificationConfirmation() {
         val mock = mockk<CalculationVerificationConfirmation>()
 
         every { mock.add(10) } returns 20
@@ -46,7 +46,7 @@ class VerificationConfirmation{
     // This may be useful in case you are using exhaustive verification: verifyAll, verifySequence or confirmVerified.
 
     @Test
-    fun recordingExclusions(){
+    fun recordingExclusions() {
         val mock = mockk<CalculationVerificationConfirmation>()
 
         every { mock.add(10) } returns 20
@@ -69,8 +69,8 @@ class VerificationConfirmation{
     //To verify concurrent operations, you can use timeout = xxx:
 
     @Test
-    fun verificationTimeout(){
-        mockk<CalculationVerificationConfirmation>() {
+    fun verificationTimeout() {
+        mockk<CalculationVerificationConfirmation> {
             every { add(10) } returns 20
             Thread {
                 Thread.sleep(2000)

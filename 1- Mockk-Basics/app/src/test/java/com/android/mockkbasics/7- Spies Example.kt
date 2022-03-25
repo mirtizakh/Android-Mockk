@@ -13,7 +13,7 @@ class SpiesExample {
      */
 
     @Test
-    fun spyExample(){
+    fun spyExample() {
         val spy = spyk<Adder>()
 
         /*
@@ -24,9 +24,9 @@ class SpiesExample {
 
         assertEquals(9, spy.add(4, 5))
 
-        verify(exactly = 1) { spy.magnify(any())}
+        verify(exactly = 1) { spy.magnify(any()) }
 
-         // The above code checks that original method is called.
+        // The above code checks that original method is called.
 
         // Besides that, we can define spy behavior by putting it to every block:
 

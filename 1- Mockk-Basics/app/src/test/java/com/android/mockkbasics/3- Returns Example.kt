@@ -61,7 +61,7 @@ class ReturnsExample {
     fun justReturns() {
         val doc1 = mockk<Dependency1>()
         every { doc1.result(5) } just Runs
-        every { doc1.call(5) } returns  5
+        every { doc1.call(5) } returns 5
 
         /*
           Or we simply create the mock by using relaxUnitFun = true

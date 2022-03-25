@@ -15,10 +15,10 @@ class Foo {
 }
 
 
-class HierarchicalMockingExample{
+class HierarchicalMockingExample {
 
     @Test
-    fun hierarchicalMocking(){
+    fun hierarchicalMocking() {
         // given
         val foo = mockk<Foo> {
             every { name } returns "Karol"

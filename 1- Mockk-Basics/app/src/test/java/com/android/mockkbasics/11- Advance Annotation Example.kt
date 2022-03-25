@@ -33,7 +33,8 @@ class CarTest {
     var trafficSystem = TrafficSystem()
 
     @Before
-    fun setUp() = MockKAnnotations.init(this, relaxUnitFun = true) // turn relaxUnitFun on for all mocks
+    fun setUp() =
+        MockKAnnotations.init(this, relaxUnitFun = true) // turn relaxUnitFun on for all mocks
 
     /*
      Injection first tries to match properties by name, then by class or superclass.

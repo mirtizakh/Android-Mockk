@@ -33,7 +33,7 @@ class CapturingExample {
 
         assertEquals(5, slot.captured)
 
-       // Besides that, you can use a slot in an answer lambda:
+        // Besides that, you can use a slot in an answer lambda:
 
         every {
             mock.divide(capture(slot), any())
@@ -41,13 +41,13 @@ class CapturingExample {
             slot.captured * 11
         }
 
-         val result = mock.divide(5, 2)   // returns 55.
+        val result = mock.divide(5, 2)   // returns 55.
 
-        assertEquals(55,result)
+        assertEquals(55, result)
     }
 
     @Test
-    fun capturingWithMutableList(){
+    fun capturingWithMutableList() {
         val list = mutableListOf<Int>()
         val mock = mockk<Divider>()
         every { mock.divide(capture(list), any()) } returns 22

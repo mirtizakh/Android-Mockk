@@ -1,6 +1,8 @@
 package com.android.mockkbasics
 
-import io.mockk.*
+import io.mockk.every
+import io.mockk.mockkConstructor
+import io.mockk.verify
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
@@ -12,7 +14,7 @@ class MockCls {
 class ConstructorMocksExample {
 
     @Test
-    fun mockConstructor(){
+    fun mockConstructor() {
         mockkConstructor(MockCls::class)
 
         every { anyConstructed<MockCls>().add(1, 2) } returns 4

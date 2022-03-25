@@ -1,6 +1,7 @@
 package com.android.mockkbasics
 
-import io.mockk.*
+import io.mockk.mockk
+import io.mockk.verify
 import org.junit.Test
 
 class RelaxedMocksExample {
@@ -13,7 +14,7 @@ class RelaxedMocksExample {
      */
 
     @Test
-    fun relaxedMock(){
+    fun relaxedMock() {
         val mock = mockk<Divider>(relaxed = true)
 
         mock.divide(5, 2) // returns 0
@@ -24,12 +25,12 @@ class RelaxedMocksExample {
     }
 
     @Test
-    fun relaxedChainMock(){
+    fun relaxedChainMock() {
         val mock = mockk<Divider>(relaxed = true)
 
-       /* Besides that, if the return value is of reference type, library would try to create child mock
-         and build chain of calls.
-        */
+        /* Besides that, if the return value is of reference type, library would try to create child mock
+          and build chain of calls.
+         */
         mock.call1(1, 2).call2(4, 5)// returns 0
 
         // In verify blocks you can check if that calls were performed:
