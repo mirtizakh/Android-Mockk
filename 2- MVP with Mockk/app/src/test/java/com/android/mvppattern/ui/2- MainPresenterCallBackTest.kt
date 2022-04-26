@@ -42,6 +42,27 @@ class MainPresenterCallBackTest {
         mainPresenter.fetchDataViaCallback()
 
         val captureData = slot<List<UiDataModel>>()
+        verify(exactly = 1) { dataRepository.fetchDataViaCallBack(capture(captureCallback)) }
+        verify(exactly = 1) { view.onResult(capture(captureData)) }
+
+        captureData.captured.let { res ->
+            assertNotNull(res)
+            assert(res.isNotEmpty())
+            assertEquals("Value 1", res.first().value)
+        }
+    }
+
+    @Test
+    fun fetchDataWithAResultViaCallBack2() {
+        val captureCallback = slot<(data: List<DataModel>) -> Unit>()
+        val fakeList = listOf(DataModel(1, "Value 1"))
+
+        mainPresenter.fetchDataViaCallback()
+
+        verify(exactly = 1) { dataRepository.fetchDataViaCallBack(capture(captureCallback)) }
+        captureCallback.captured.invoke(fakeList)
+
+        val captureData = slot<List<UiDataModel>>()
 
         verify(exactly = 1) { view.onResult(capture(captureData)) }
 
