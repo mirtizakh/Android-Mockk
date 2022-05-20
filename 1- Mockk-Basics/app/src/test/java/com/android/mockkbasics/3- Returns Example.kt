@@ -71,7 +71,9 @@ class ReturnsExample {
          */
 
         doc1.call(5)
+        doc1.result(5)
 
+        verify(exactly = 1) { doc1.result(5) }
         verify(exactly = 1) { doc1.call(5) }
     }
 

@@ -51,6 +51,6 @@ class Annotation {
 
         verify { doc1.call(any()) }
         verify { doc2Spy.call(any()) }
-        verify { doc2Spy.result(any()) }
+        //verify { doc2Spy.result(any()) }
     }
 }
