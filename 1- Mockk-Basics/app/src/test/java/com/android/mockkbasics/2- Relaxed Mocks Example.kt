@@ -41,7 +41,7 @@ class RelaxedMocksExample {
     // Mock relaxed for functions returning Unit
 
     /*
-    n case you would like Unit returning functions to be relaxed,
+    In case you would like Unit returning functions to be relaxed,
     you can use relaxUnitFun = true as an argument to the mockk function,
      @MockK annotation or MockKAnnotations.init function.
      */

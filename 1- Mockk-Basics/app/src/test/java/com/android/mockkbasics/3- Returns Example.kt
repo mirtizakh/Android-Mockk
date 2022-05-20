@@ -67,7 +67,7 @@ class ReturnsExample {
           Or we simply create the mock by using relaxUnitFun = true
           val doc1 = mockk<Dependency1>(relaxUnitFun = true)
 
-          so we don't need to add behavior , you can replace line 65 and 66 by line 70
+          so we don't need to add behavior , you can replace line 62 and 63 by line 68
          */
 
         doc1.call(5)

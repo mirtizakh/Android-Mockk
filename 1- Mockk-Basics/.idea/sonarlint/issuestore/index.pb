@@ -19,7 +19,7 @@ Dapp/src/test/java/com/android/mockkbasics/17- Extension Functions.kt,c/e/ce051
 Kapp/src/test/java/com/android/mockkbasics/11- Advance Annotation Example.kt,8/f/8f9d1a33ea3192ca1553826cfaf691c780ef051e
 h
 8app/src/test/java/com/android/mockkbasics/18- Varargs.kt,e/3/e33841c23e2fd6b3e48365b0969d07587596cdaf
-d
-4app/src/main/java/com/android/mockkbasics/Divider.kt,f/c/fcfae2f6ead092e828d2aff5b0657246c0b03965
 q
 Aapp/src/test/java/com/android/mockkbasics/6- Capturing Example.kt,8/f/8f1222162705bcd1b46db6f9d8103df25f634b0d
+l
+<app/src/main/java/com/android/mockkbasics/TestableService.kt,5/3/535f3856469ea1e6ada145201fa95e864c091c88
